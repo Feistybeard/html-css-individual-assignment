@@ -272,7 +272,6 @@ body {
     font-size: 1.5rem;
 }
 .booking-available__room-description {
-    /* text-align: center; */
     font-size: 1.1rem;
     font-family: 'Roboto', sans-serif;
     line-height: 1.4rem;
@@ -286,12 +285,52 @@ body {
 }
 /* #endregion */
 
+/* #region -----about.html - main----- */
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+.about > * {
+    padding: 2rem 1rem;
+}
+.about__our-mission {
+    background-image: url("../img/photos/07-night.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.about__heading {
+    text-align: center;
+    font-size: 3rem;
+    padding-bottom: 1rem;
+    font-family: "Gemunu Libre", sans-serif;
+    color: #fff;
+}
+.about__paragraph {
+    font-size: 1.1rem;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.4rem;
+    color: #fff;
+    text-align: center;
+}
+.about__figure-img {
+    clip-path: circle(7rem);
+    width: 100%;
+}
+/* #endregion */
+
 /* #region -----index.htlm,booking.html,about.html - media queries------ */
 @media screen and (min-width: 700px) {
     .header__links {
         width: 70%;
         margin: 0 auto;
     }
+    /* ----- index.html ----- */
     .intro__book-now {
         height: 345px;
     }
@@ -304,7 +343,7 @@ body {
     .rooms-info__card-text {
         font-size: 1.2rem;
     }
-
+    /* ----- boking.html ----- */
     .booking {
         display: grid;
         grid-template-columns: 1fr 2fr;
@@ -318,6 +357,25 @@ body {
     }
     .booking-available__room {
         outline: 1px solid #fff;
+    }
+    /* ----- about.html ----- */
+    .about__about-us, .about__our-mission, .about__the-founder {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        padding: 6rem 0;
+    }
+    .about__the-founder {
+        display: flex;
+        flex-direction: column;
+    }
+    .about__figure-img {
+        clip-path: circle(10rem);
+    }
+    .about__paragraph {
+        font-size: 1.3rem;
+        width: 80%;
     }
 }
 /* #endregion */
