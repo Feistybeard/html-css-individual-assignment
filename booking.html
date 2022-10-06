@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bonz.ai hotel</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <figure class="header__logo">
+                <img class="header__logo-img" src="./img/logo/bonz.ai-logo-white-portrait-full.png" alt="bonz.ai logo">
+            </figure>
+            <nav class="header__nav" id="header__nav">
+                <ul class="header__links">
+                    <li class="header__link"><a href="index.html">Home</a></li>
+                    <li class="header__link header__link--active"><a href="booking.html">Booking</a></li>
+                    <li class="header__link"><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="booking">
+            <aside class="booking__date-container">
+                <article class="booking__summury">
+                    <h1 class="booking__date-heading">Searched period:</h1>
+                    <article class="booking__date-cards">
+                        <article class="booking__date-card">
+                            <article class="booking__date-card-title">
+                                <h2>Check-in</h2>
+                            </article>
+                            <article class="booking__date-card-date">
+                                <p>Thursday<br />6<br />October</p>
+                            </article>
+                        </article>
+                        <article class="booking__date-card">
+                            <article class="booking__date-card-title">
+                                <h2>Check-out</h2>
+                            </article>
+                            <article class="booking__date-card-date">
+                                <p>Friday<br />7<br />October</p>
+                            </article>
+                        </article>
+                        <p class="booking__days-and-rooms">Total nights: 1 night</p>
+                        <p class="booking__days-and-rooms">Total rooms: 1 room</p>
+                        <button class="btn-book">Search again</button>
+                    </article>
+                </article>
+            </aside>
+            <article class="booking-available">
+                <h1 class="booking-available__heading">Available rooms:</h1>
+                <article class="booking-available__rooms">
+                    <article class="booking-available__room">
+                        <article class="booking-available__room-img">
+                            <img src="./img/photos/01-day.jpg" alt="room 1">
+                        </article>
+                        <article class="booking-available__room-info">
+                            <h2 class="booking-available__room-title">Room 1</h2>
+                            <p class="booking-available__room-price">Price: 100$</p>
+                            <p class="booking-available__room-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
+                            <button class="btn-book btn-booking">Book now</button>
+                        </article>
+                    </article>
+                    <article class="booking-available__room">
+                        <article class="booking-available__room-img">
+                            <img src="./img/photos/02-day.jpg" alt="room 2">
+                        </article>
+                        <article class="booking-available__room-info">
+                            <h2 class="booking-available__room-title">Room 2</h2>
+                            <p class="booking-available__room-price">Price: 200$</p>
+                            <p class="booking-available__room-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
+                            <button class="btn-book btn-booking">Book now</button>
+                        </article>
+                    </article>
+                    <article class="booking-available__room">
+                        <article class="booking-available__room-img">
+                            <img src="./img/photos/03-day.jpg" alt="room 3">
+                        </article>
+                        <article class="booking-available__room-info">
+                            <h2 class="booking-available__room-title">Room 3</h2>
+                            <p class="booking-available__room-price">Price: 300$</p>
+                            <p class="booking-available__room-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
+                            <button class="btn-book btn-booking">Book now</button>
+                        </article>
+                    </article>
+                    <article class="booking-available__room">
+                        <article class="booking-available__room-img">
+                            <img src="./img/photos/04-day.jpg" alt="room 4">
+                        </article>
+                        <article class="booking-available__room-info">
+                            <h2 class="booking-available__room-title">Room 4</h2>
+                            <p class="booking-available__room-price">Price: 300$</p>
+                            <p class="booking-available__room-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
+                            <button class="btn-book btn-booking">Book now</button>
+                        </article>
+                    </article>
+                    <article class="booking-available__room">
+                        <article class="booking-available__room-img">
+                            <img src="./img/photos/06-day.jpg" alt="room 6">
+                        </article>
+                        <article class="booking-available__room-info">
+                            <h2 class="booking-available__room-title">Room 6</h2>
+                            <p class="booking-available__room-price">Price: 300$<d/p>
+                            <p class="booking-available__room-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
+                            <button class="btn-book btn-booking">Book now</button>
+                        </article>
+                    </article>
+                </article>
+                </article>
+            </article>
+        </main>
+        <footer class="footer">
+            <figure class="footer__logo">
+                <img class="footer__logo-img" src="./img/logo/bonz.ai-logo-white-portrait-full.png" alt="bonz.ai logo">
+            </figure>
+            <p class="footer__text">bonz.ai<br />441 Sutter St<br />San Francisco<br />CA 94108<br />USA<br />1-800-231443</p>
+        </footer>
+    </div>
+    <script>
+        let nav = document.getElementById("header__nav");
+        let sticky = nav.offsetTop;
+        window.onscroll = function() {sticker()};
+        function sticker() {
+           if (window.pageYOffset >= sticky) {
+              nav.classList.add("sticky")
+           } else {
+              nav.classList.remove("sticky");
+           }
+        }
+    </script>
+    </div>
+</body>
+</html>

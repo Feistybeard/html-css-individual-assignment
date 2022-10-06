@@ -6,7 +6,6 @@
     margin: 0;
     padding: 0;
 }
-
 body {
     background: #000;
 }
@@ -14,17 +13,14 @@ body {
 /* #region -----repeated----- */
 .wrapper {
     /* width: 100vw; */
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     background: linear-gradient(211deg, rgba(0,0,0,1) 0%, rgba(19,0,36,1) 35%, rgb(7, 150, 179) 90%); 
-
-    /* background: linear-gradient(211deg, rgba(0,0,0,1) 0%, rgba(19,0,36,1) 35%, rgb(7, 150, 179) 100%);  */
 }
 .sticky {
     position: fixed;
     top: 0;
-    max-width: 1000px;
-   
+    max-width: 1200px;
  }
 .btn-book {
     color: #fff;
@@ -43,7 +39,7 @@ body {
 }
 /* #endregion */
 
-/* #region -----index.html,book.html,about.html - header----- */
+/* #region -----index.html,booking.html,about.html - header----- */
 .header {
     padding: 0;
 }
@@ -183,13 +179,14 @@ body {
 }
 /* #endregion */
 
-/* #region -----index.html,book.html,about.html - footer----- */
+/* #region -----index.html,booking.html,about.html - footer----- */
 .footer {
     display: flex;
     gap: 2rem;
     justify-content: space-evenly;
     background-color: rgba(19,0,36,1);
     padding: 1rem 0;
+    margin-top: 2rem;
 }
 .footer__logo, .footer__text {
     text-align: center;
@@ -200,24 +197,106 @@ body {
 }
 /* #endregion */
 
+/* #region -----booking.html - date-container----- */
+.booking__date-container {
+    color: #fff;
+    /* background-color: rgba(19,0,36,1); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+.booking__date-heading {
+    text-align: center;
+    font-size: 3rem;
+    padding-bottom: 1rem;
+    font-family: "Gemunu Libre", sans-serif;
+}
+.booking__date-cards {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-flow: wrap;
+}
+.booking__date-card {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    text-align: center;
+}
+.booking__date-card-title {
+    color: #fff;
+    padding: .2rem 1rem;
+    font-size: .8rem;
+    background-color: red;
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+}
+.booking__date-card-date {
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: #000;
+    font-family: "Roboto", sans-serif;
+}
+.booking__days-and-rooms{
+    text-align: center;
+    flex-basis: 100%;
+    font-size: 1.1rem;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.4rem;
+}
+.booking-available__heading {
+    text-align: center;
+    font-size: 3rem;
+    padding-bottom: 1rem;
+    font-family: "Gemunu Libre", sans-serif;
+    color: #fff;
+}
+.booking-available__rooms {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.booking-available__room-info {
+    text-align: center;
+}
+.booking-available__room-title, .booking-available__room-price {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    font-family: "Gemunu Libre", sans-serif;
+    color: #fff;
+}
+.booking-available__room-price {
+    font-size: 1.5rem;
+}
+.booking-available__room-description {
+    /* text-align: center; */
+    font-size: 1.1rem;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.4rem;
+    color: #fff;
+}
+.booking-available__room-img img {
+    width: 100%;
+}
+.btn-booking {
+    margin: 1rem 0 1rem 0;
+}
+/* #endregion */
+
+/* #region -----index.htlm,booking.html,about.html - media queries------ */
 @media screen and (min-width: 700px) {
     .header__links {
-        
-    }
-    .intro__hero {
-        justify-content: space-evenly;
+        width: 70%;
+        margin: 0 auto;
     }
     .intro__book-now {
         height: 345px;
     }
-    .intro__text {
-        /* width: 100%; */
-    }
     .rooms-info__cards {
         grid-template-columns: 1fr 1fr;
-    }
-    .rooms-info__card {
-        padding: 5rem;
     }
     .rooms-info__card-heading {
         font-size: 3rem;
@@ -225,4 +304,20 @@ body {
     .rooms-info__card-text {
         font-size: 1.2rem;
     }
+
+    .booking {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    .booking-available {
+        padding: 2rem 3rem;
+    }
+    .booking-available__rooms {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    .booking-available__room {
+        outline: 1px solid #fff;
+    }
 }
+/* #endregion */
