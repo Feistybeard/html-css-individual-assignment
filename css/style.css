@@ -1,0 +1,228 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre&family=Noto+Sans+Mono&family=Roboto&display=swap');
+* {
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #000;
+}
+
+/* #region -----repeated----- */
+.wrapper {
+    /* width: 100vw; */
+    max-width: 1000px;
+    margin: 0 auto;
+    background: linear-gradient(211deg, rgba(0,0,0,1) 0%, rgba(19,0,36,1) 35%, rgb(7, 150, 179) 90%); 
+
+    /* background: linear-gradient(211deg, rgba(0,0,0,1) 0%, rgba(19,0,36,1) 35%, rgb(7, 150, 179) 100%);  */
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    max-width: 1000px;
+   
+ }
+.btn-book {
+    color: #fff;
+    padding: 1rem 2rem;
+    border: 1px #fff solid;
+    background-color: transparent;
+    font-size: 1.1rem;
+    font-family: 'Gemunu Libre', sans-serif;
+    line-height: 1.4rem;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+.btn-book:hover {
+    background-color: #130024;
+    transition: all 1s ease;
+}
+/* #endregion */
+
+/* #region -----index.html,book.html,about.html - header----- */
+.header {
+    padding: 0;
+}
+.header__logo {
+    background-image: url('../img/photos/07-night.jpg');
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.header__logo-img {
+    height: 16rem;
+}
+.header__nav {
+    overflow: hidden;
+    background-color: #000;
+    padding: .5rem 0 .5rem 0;
+    width: 100%;
+}
+.header__links {
+    font-family:'Noto Sans Mono', monospace;
+    font-size: 1.35rem;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+.header__link a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.header__link a:hover, .header__link--active a {
+    color: #fff;
+}
+/* #endregion */
+
+/* #region -----index.html - intro----- */
+.intro__hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem 0;
+}
+.intro__book-now {
+    background-image: url('../img/photos/01-night.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+.intro__heading {
+    text-align: center;
+    max-width: 80%;
+    color: #fff;
+    font-size: 3rem;
+    font-family: 'Gemunu Libre', sans-serif;
+    padding-bottom: 1.5rem;
+}
+.intro__text {
+    color: #fff;
+    width: 80%;
+    font-size: 1.1rem;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.4rem;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+/* #endregion */
+
+/* #region -----index.html - rooms----- */
+.rooms-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.rooms-info__tile {
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+.rooms-info__title-heading {
+    color: #fff;
+    font-size: 3rem;
+    font-family: 'Gemunu Libre', sans-serif;
+    padding-bottom: 1.5rem;
+}
+.rooms-info__title-text {
+    color: #fff;
+    width: 80%;
+    font-size: 1.1rem;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.4rem;
+    text-align: center;
+}
+.rooms-info__cards {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+}
+.rooms-info__card {
+    /* margin: 1rem; */
+    color: #fff;
+    background-image: url('../img/photos/05-night.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 6rem;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.rooms-info__card:nth-child(even) {
+    background-image: url('../img/photos/06-night.jpg');
+}
+.rooms-info__card-heading {
+    flex: 1;
+    color: #fff;
+    font-size: 2.5rem;
+    font-family: 'Gemunu Libre', sans-serif;
+}
+.rooms-info__card-text {
+    flex: content;
+    font-family: "Roboto", sans-serif;
+}
+/* #endregion */
+
+/* #region -----index.html,book.html,about.html - footer----- */
+.footer {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-evenly;
+    background-color: rgba(19,0,36,1);
+    padding: 1rem 0;
+}
+.footer__logo, .footer__text {
+    text-align: center;
+    color: #fff;
+}
+.footer__logo-img {
+    height: 7rem;
+}
+/* #endregion */
+
+@media screen and (min-width: 700px) {
+    .header__links {
+        
+    }
+    .intro__hero {
+        justify-content: space-evenly;
+    }
+    .intro__book-now {
+        height: 345px;
+    }
+    .intro__text {
+        /* width: 100%; */
+    }
+    .rooms-info__cards {
+        grid-template-columns: 1fr 1fr;
+    }
+    .rooms-info__card {
+        padding: 5rem;
+    }
+    .rooms-info__card-heading {
+        font-size: 3rem;
+    }
+    .rooms-info__card-text {
+        font-size: 1.2rem;
+    }
+}
