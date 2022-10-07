@@ -13,7 +13,7 @@
             <figure class="header__logo">
                 <img class="header__logo-img" src="./img/logo/bonz.ai-logo-white-portrait-full.png" alt="bonz.ai logo">
             </figure>
-            <nav class="header__nav" id="header__nav">
+            <nav class="header__nav" id="header__nav--sticky">
                 <ul class="header__links">
                     <li class="header__link header__link--active"><a href="index.html">Home</a></li>
                     <li class="header__link"><a href="booking.html">Booking</a></li>
@@ -23,53 +23,53 @@
         </header>
         <main>
             <article class="intro">
-                <section class="intro__hero">
-                    <h1 class="intro__heading">21st century hotel</h1>
+                <article class="intro__hero">
+                    <h2 class="intro__heading">21st century hotel</h2>
                     <p class="intro__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum quod exercitationem modi maxime dolor aliquid.</p>
-                </section>
-                <section class="intro__book-now">
+                </article>
+                <article class="intro__book-now">
                     <p class="intro__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto deleniti eaque optio at maxime officiis? Iste quisquam alias architecto voluptatibus sed aperiam, excepturi et itaque porro, doloribus non ducimus aliquid.</p>
-                    <a href="booking.html"><button class="btn-book">Book now></button></a>
-                </section>
+                    <button class="btn">Book now</button>
+                </article>
             </article>
             <article class="rooms-info">
-                <section class="rooms-info__tile">
-                    <h1 class="rooms-info__title-heading">Rooms we provide</h1>
-                    <p class="rooms-info__title-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum quod exercitationem modi maxime dolor aliquid.</p>
-                </section>
-                <section class="rooms-info__cards">
+                <article class="rooms-info__top">
+                    <h2 class="rooms-info__heading">Rooms we provide</h2>
+                    <p class="rooms-info__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum quod exercitationem modi maxime dolor aliquid.</p>
+                </article>
+                <article class="rooms-info__cards">
                    <article class="rooms-info__card">
                         <h2 class="rooms-info__card-heading">Room name</h2>
                         <p class="rooms-info__card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <a href="booking.html"><button class="btn-book">Book now></button></a>
+                        <button class="btn">Book now</button>
                     </article>
                     <article class="rooms-info__card">
                         <h2 class="rooms-info__card-heading">Room name</h2>
                         <p class="rooms-info__card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <a href="booking.html"><button class="btn-book">Book now></button></a>
+                        <button class="btn">Book now</button>
                     </article>
                     <article class="rooms-info__card">
                         <h2 class="rooms-info__card-heading">Room name</h2>
                         <p class="rooms-info__card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <a href="booking.html"><button class="btn-book">Book now></button></a>
+                        <button class="btn">Book now</button>
                     </article>
                     <article class="rooms-info__card">
                         <h2 class="rooms-info__card-heading">Room name</h2>
                         <p class="rooms-info__card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <a href="booking.html"><button class="btn-book">Book now></button></a> 
+                        <button class="btn">Book now</button>
                     </article>
-                </section>
+                </article>
             </article>
         </main>
         <footer class="footer">
             <figure class="footer__logo">
                 <img class="footer__logo-img" src="./img/logo/bonz.ai-logo-white-portrait-full.png" alt="bonz.ai logo">
             </figure>
-            <p class="footer__text">bonz.ai<br />441 Sutter St<br />San Francisco<br />CA 94108<br />USA<br />1-800-231443</p>
+            <address class="footer__text">bonz.ai<br>441 Sutter St<br>San Francisco<br>CA 94108<br>USA<br>1-800-231443</address>
         </footer>
     </div>
     <script>
-        let nav = document.getElementById("header__nav");
+        let nav = document.getElementById("header__nav--sticky");
         let sticky = nav.offsetTop;
         window.onscroll = function() {sticker()};
         function sticker() {

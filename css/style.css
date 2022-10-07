@@ -1,5 +1,7 @@
 /* Google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre&family=Noto+Sans+Mono&family=Roboto&display=swap');
+
+/* #region -----repeated----- */
 * {
     box-sizing: border-box;
     /* outline: 1px solid red; */
@@ -9,8 +11,6 @@
 body {
     background: #000;
 }
-
-/* #region -----repeated----- */
 .wrapper {
     /* width: 100vw; */
     max-width: 1200px;
@@ -22,7 +22,7 @@ body {
     top: 0;
     max-width: 1200px;
  }
-.btn-book {
+.btn {
     color: #fff;
     padding: 1rem 2rem;
     border: 1px #fff solid;
@@ -33,9 +33,19 @@ body {
     transition: all 1s ease;
     cursor: pointer;
 }
-.btn-book:hover {
+.btn:hover {
     background-color: #130024;
     transition: all 1s ease;
+}
+.paragraph {
+    padding: 1rem;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+}
+main > * {
+    padding: 2rem 1rem;
 }
 /* #endregion */
 
@@ -124,20 +134,20 @@ body {
     flex-wrap: wrap;
     justify-content: center;
 }
-.rooms-info__tile {
+.rooms-info__top {
     padding: 2rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; 
 }
-.rooms-info__title-heading {
+.rooms-info__heading {
     color: #fff;
     font-size: 3rem;
     font-family: 'Gemunu Libre', sans-serif;
     padding-bottom: 1.5rem;
 }
-.rooms-info__title-text {
+.rooms-info__text {
     color: #fff;
     width: 80%;
     font-size: 1.1rem;
@@ -177,6 +187,7 @@ body {
     flex: content;
     font-family: "Roboto", sans-serif;
 }
+
 /* #endregion */
 
 /* #region -----index.html,booking.html,about.html - footer----- */
@@ -188,12 +199,20 @@ body {
     padding: 1rem 0;
     margin-top: 2rem;
 }
-.footer__logo, .footer__text {
-    text-align: center;
-    color: #fff;
+.footer__logo {
+    display: flex;
+    align-self: center;
 }
 .footer__logo-img {
     height: 7rem;
+}
+.footer__text {
+    text-align: center;
+    padding: 1rem;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height: 1.4rem;
 }
 /* #endregion */
 
@@ -280,45 +299,40 @@ body {
 .booking-available__room-img img {
     width: 100%;
 }
-.btn-booking {
+.booking-available__room-btn {
     margin: 1rem 0 1rem 0;
 }
 /* #endregion */
 
 /* #region -----about.html - main----- */
-
-.about {
+.about-us {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem 0;
 }
-.about > * {
-    padding: 2rem 1rem;
-}
-.about__our-mission {
+.about-us__container:nth-child(2) {
     background-image: url("../img/photos/07-night.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
 }
-.about__heading {
+.about-us__heading {
     text-align: center;
     font-size: 3rem;
     padding-bottom: 1rem;
     font-family: "Gemunu Libre", sans-serif;
     color: #fff;
 }
-.about__paragraph {
+.about-us__paragraph {
     font-size: 1.1rem;
     font-family: 'Roboto', sans-serif;
     line-height: 1.4rem;
     color: #fff;
     text-align: center;
 }
-.about__figure-img {
+.about-us__figure-img {
     clip-path: circle(7rem);
     width: 100%;
 }
@@ -331,6 +345,13 @@ body {
         margin: 0 auto;
     }
     /* ----- index.html ----- */
+    .intro__hero {
+        flex-direction: column;
+        align-content: center;   
+    }
+    .intro__text {
+        width: 50%;
+    }
     .intro__book-now {
         height: 345px;
     }
@@ -359,22 +380,22 @@ body {
         outline: 1px solid #fff;
     }
     /* ----- about.html ----- */
-    .about__about-us, .about__our-mission, .about__the-founder {
+    .about-us__container {
         display: grid;
         grid-template-columns: 1fr 1fr;
         justify-content: center;
         align-items: center;
         padding: 6rem 0;
     }
-    .about__the-founder {
+    .about__us__container--flex {
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
-    .about__figure-img {
+    .about-us__figure-img {
         clip-path: circle(10rem);
     }
-    .about__paragraph {
-        font-size: 1.3rem;
+    .about-us__paragraph {
         width: 80%;
     }
 }

@@ -13,7 +13,7 @@
             <figure class="header__logo">
                 <img class="header__logo-img" src="./img/logo/bonz.ai-logo-white-portrait-full.png" alt="bonz.ai logo">
             </figure>
-            <nav class="header__nav" id="header__nav">
+            <nav class="header__nav" id="header__nav--sticky">
                 <ul class="header__links">
                     <li class="header__link"><a href="index.html">Home</a></li>
                     <li class="header__link"><a href="booking.html">Booking</a></li>
@@ -21,32 +21,32 @@
                 </ul>
             </nav>
         </header>
-        <main class="about">
-            <article class="about__about-us">
-                <h1 class="about__heading">About us</h1>
-                <p class="about__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, aperiam laborum? Molestias magni placeat necessitatibus minus aperiam nobis amet eius nam. Blanditiis tenetur ipsa aspernatur quibusdam nesciunt harum animi nisi.</p>
+        <main class="about-us">
+            <article class="about-us__container">
+                <h1 class="about-us__heading">About us</h1>
+                <p class="about-us__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, aperiam laborum? Molestias magni placeat necessitatibus minus aperiam nobis amet eius nam. Blanditiis tenetur ipsa aspernatur quibusdam nesciunt harum animi nisi.</p>
             </article>
-            <article class="about__our-mission">
-                <h1 class="about__heading">Our mission</h1>
-                <p class="about__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, aperiam laborum? Molestias magni placeat necessitatibus minus aperiam nobis amet eius nam. Blanditiis tenetur ipsa aspernatur quibusdam nesciunt harum animi nisi.</p>
+            <article class="about-us__container">
+                <h1 class="about-us__heading">Our mission</h1>
+                <p class="about-us__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, aperiam laborum? Molestias magni placeat necessitatibus minus aperiam nobis amet eius nam. Blanditiis tenetur ipsa aspernatur quibusdam nesciunt harum animi nisi.</p>
             </article>
-            <article class="about__the-founder">
-                <h1 class="about__heading">The founder</h1>
-                <figure class="about__figure">
-                    <img class="about__figure-img" src="./img/marilia-castelli-JkhNE13-sXs-unsplash.jpg" alt="bonz.ai founder">
+            <article class="about__us__container--flex">
+                <h1 class="about-us__heading">The founder</h1>
+                <figure class="about-us__figure">
+                    <img class="about-us__figure-img" src="./img/marilia-castelli-JkhNE13-sXs-unsplash.jpg" alt="bonz.ai founder">
                 </figure>
-                <p class="about__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, aperiam laborum? Molestias magni placeat necessitatibus minus aperiam nobis amet eius nam. Blanditiis tenetur ipsa aspernatur quibusdam nesciunt harum animi nisi.</p>
+                <p class="about-us__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, aperiam laborum? Molestias magni placeat necessitatibus minus aperiam nobis amet eius nam. Blanditiis tenetur ipsa aspernatur quibusdam nesciunt harum animi nisi.</p>
             </article>
         </main>
         <footer class="footer">
             <figure class="footer__logo">
                 <img class="footer__logo-img" src="./img/logo/bonz.ai-logo-white-portrait-full.png" alt="bonz.ai logo">
             </figure>
-            <p class="footer__text">bonz.ai<br />441 Sutter St<br />San Francisco<br />CA 94108<br />USA<br />1-800-231443</p>
+            <p class="footer__text">bonz.ai<br>441 Sutter St<br>San Francisco<br>CA 94108<br>USA<br>1-800-231443</p>
         </footer>
     </div>
     <script>
-        let nav = document.getElementById("header__nav");
+        let nav = document.getElementById("header__nav--sticky");
         let sticky = nav.offsetTop;
         window.onscroll = function() {sticker()};
         function sticker() {
